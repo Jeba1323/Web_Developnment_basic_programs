@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Moving Car</title>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<script
+src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+$(document).keydown(function(event){
+var car = $('#car')
+var arrow = {left: 37, up: 38, right: 39, down: 40 };
+switch(event.which){
+case arrow.right: car.css('transform','rotate(360deg)');
+car.animate({left:'+=5px'},1); 
+break;
+case arrow.down: car.css('transform','rotate(90deg)');
+car.animate({top:'+=5px'},1);
+break;
+case arrow.up: car.css('transform','rotate(270deg)');
+car.animate({top:'-=5px'},1);
+break;
+case arrow.left: car.css('transform','rotateY(180deg)');
+car.animate({left:'-=5px'},1);
+break;
+}
+var car = $('#car');
+var car_pos = $('#car').position();
+var l = car_pos.left;
+var t = car_pos.top;
+if (l > 0 && l < 268 ) {
+if(t < 85 || t >250)
+{
+$('#car').fadeOut('slow');
+$('#car').fadeIn('slow'); 
+}
+}
+if (l >470) {
+if(t < 85 || t >250)
+{
+$('#car').fadeOut('slow');
+$('#car').fadeIn('slow'); 
+}
+}
+})
+})
+</script>
+<style>
+*{
+margin: 0px;
+padding: 0px;
+box-sizing: border-box;
+}
+.r1 {
+position: fixed;
+z-index: 0;
+top:0px;
+width: 200px;
+height: 800px;
+left: 40%;
+background-color: black;
+}
+.r2{
+position: fixed;
+top:100px;
+z-index: 1;
+width: 100%;
+height: 200px;
+background-color: black;
+}
+</style>
+</head>
+<body>
+<div id="car" style="position:absolute;z-index:3;left:5px; 
+top:100px;width:80px;height:50px;">
+<img id="car" src="data:image/jpeg;base64,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" alt="" width="80" height="50">
+</div>
+<br>
+<div class="r1"></div>
+<div class="r2"></div>
+</body>
+</html>
