@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="Q_2.CSS">
+        <script
+        src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+        <script
+        src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+        <script>
+        var app=angular.module("myApp",['ngRoute']);
+        app.config(function($routeProvider){
+            $routeProvider.when('/Exp%209b(1)(WT)',{
+                templateUrl:'https://jeba1323.github.io/URK20CS1149/Exp%209b(1)(WT).html'
+            })
+            .when('/Exp%209b(2)(WT)',{
+                templateUrl:'https://jeba1323.github.io/URK20CS1149/Exp%209b(2)(WT).html'
+            })
+            .when('/Exp%209b(3)(WT)',{
+                templateUrl:'https://jeba1323.github.io/URK20CS1149/Exp%209b(3)(WT).html'
+            })
+            .when('/Exp%209b(4)(WT)',{
+                templateUrl:'https://jeba1323.github.io/URK20CS1149/Exp%209b(4)(WT).html'
+            })
+            });
+        </script>
+        </head>
+        <body ng-app="myApp">
+            <div class="sidebar" width="20%">
+                <h2>REGISTER NUMBERS</h2>
+                <a href="https://jeba1323.github.io/URK20CS1149/Exp%209b(1)(WT).html"><b>URK20CS1149</b></a>
+                <a href="https://jeba1323.github.io/URK20CS1149/Exp%209b(2)(WT).html"><b>URK20CS2059</b></a>
+                <a href="https://jeba1323.github.io/URK20CS1149/Exp%209b(3)(WT).html"><b>URK20CS2061</b></a>
+                <a href="https://jeba1323.github.io/URK20CS1149/Exp%209b(4)(WT).html"><b>URK20CS2117</b></a>
+            </div>
+            <div class="content" ng-view></div>
+        </body>
+</html>
